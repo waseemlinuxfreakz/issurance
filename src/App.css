@@ -1,0 +1,394 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'TT Commons';
+  margin: 0;
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: calc(var(--bs-gutter-x) * -.5);
+  margin-left: calc(var(--bs-gutter-x) * -.5);
+}
+
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  margin-top: var(--bs-gutter-y);
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.signWrap {
+  padding-top: 140px;
+  min-height: 100vh;
+  background: #000;
+}
+
+header#signup-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: #EFB604;
+  padding: 11px 0;
+}
+
+
+.sgnup-login_area> div {
+  width: 100%;
+}
+
+.footer-container,
+.container,
+.header-contaienr {
+  max-width: 1304px !important;
+  margin: 0 auto !important;
+  padding: 0 12px !important;
+}
+
+.login_area {
+  display: flex;
+  flex-direction: column;
+}
+
+.sgnup-login-footer {
+  margin-top: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.sgnup-login_area {
+  display: flex;
+  flex-direction: column;
+}
+
+.sgnup-login-container {
+  max-width: 613px;
+  padding: 0px 12px 0 12px;
+  margin: 0 auto;
+}
+
+.whiteBtn {
+  display: inline-block;
+  width: 90%;
+  max-width: 408px;
+  padding: 10px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: -0.2px;
+  color: #24272A;
+  background: #EEEEEE;
+  border: 1px solid #DDDDDD;
+  border-radius: 27px;
+  text-decoration: none;
+}
+
+.sgnup-login-text {
+  color: #fff;
+  margin-bottom: 100px;
+}
+
+.sgnup-login-text h1 {
+  font-size: 55px;
+  line-height: 60px;
+  margin: 0;
+}
+
+.sgnup-login-text img {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.sgnup-login-btn> a {
+  margin-bottom: 12px;
+}
+
+a.blackBtn {
+  display: inline-block;
+  width: 90%;
+  max-width: 408px;
+  padding: 10px;
+  font-style: normal;
+  text-align: center;
+  letter-spacing: -0.2px;
+  border-radius: 27px;
+  text-decoration: none;
+  background: #24272A;
+  border: 1px solid #000000;
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 20px;
+}
+.sgnup-login-footer p {
+  text-align: center;
+  letter-spacing: -0.2px;
+  color: #929496;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  padding-bottom: 40px;
+}
+
+.sgnup-login-footer p a {
+  font-weight: 600;
+  color: #929496;
+  text-decoration: none;
+}
+
+.sgnup-login-btn {
+  text-align: center;
+}
+
+footer.footer_area {
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding-bottom: 26px;
+  padding-top: 0px;
+  background: #000;
+}
+
+ul.footer-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+ul.footer-links li a {
+  font-family: 'TT Commons';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: -0.2px;
+  color: #8B8B8B;
+  display: block;
+  margin-right: 20px;
+  transition: .3s;
+}
+
+.formSteepWrap .signWrap {
+  padding-bottom: 80px;
+}
+
+ul.footer-links li a:hover {
+  color: #fff;
+}
+
+.formSteepBox {
+  color: #fff;
+}
+
+span.form_steepLabel {
+  background: #fff;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 14px;
+  color: #424446;
+  letter-spacing: -0.2px;
+  padding: 3px 8px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.col-md-6 {
+  width: 50% !important;
+}
+
+.formSteepBox h1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 60px;
+  letter-spacing: -0.4px;
+  color: #EEEEEE;
+}
+
+.signUpSteep4 form,
+.signUpSteep3 form,
+.signUpSteep1 form {
+  margin-top: 65px;
+}
+
+.form_inp {
+  max-width: 785px;
+}
+
+.form_inp label {
+  display: inline-block;
+  font-family: 'TT Commons';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.2px;
+  color: #EEEEEE;
+  margin-bottom: 16px;
+}
+
+.form_inp input {
+  display: block;
+  width: 100%;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 34px;
+  letter-spacing: -0.4px;
+  padding: 17px;
+  border-radius: 4px;
+  border: 0;
+  outline: none;
+  box-shadow: none;
+  color: #424446;
+}
+
+.form_inp input::placeholder {
+  color: #A7A8AC;
+}
+
+button.form_steepBtn {
+  margin-top: 40px;
+  background: #101010;
+  border-radius: 27px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.2px;
+  color: #4D4E52;
+  padding: 7px 16px;
+  transition: .3s ease all;
+  cursor: pointer;
+  border: 1px solid #101010;
+}
+
+button.form_steepBtn:hover {
+  color: #fff;
+  background: #24272A;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.qrcode_scan {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.qrcode {
+  width: 50%;
+}
+
+.qr-inf {
+  width: 50%;
+  position: relative;
+  z-index: 1;
+  max-width: 488px;
+  margin-right: auto;
+  background: #121212;
+  border-radius: 4px;
+  display: inline-block;
+  padding: 20px 45px 45px 47px;
+}
+
+.qr-inf p {
+  font-family: 'TT Commons';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px !important;
+  line-height: 17px;
+  letter-spacing: -0.2px;
+  color: #EEEEEE;
+  margin-bottom: 10px;
+}
+
+.formSteepBox p {
+  font-family: 'TT Commons';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.2px;
+  color: #EEEEEE;
+}
+
+.qrcode img {
+  display: block;
+  margin: 0 auto;
+  margin-top: -8%;
+}
+
+.w50 {
+  width: 50%;
+}
+
+.qr-inf img {
+  display: block;
+  position: absolute;
+  left: 24px;
+  top: 24px;
+}
+
+
+.mt-auto {
+  margin-top: auto !important;
+}
+
+.colW {
+  color: #fff;
+}
+
+img.addIcon {
+  display: block;
+  position: absolute;
+  right: -14px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.accordianBox {
+  max-width: 478px;
+  background: #121212;
+  border-radius: 0px 0px 4px 4px;
+  padding: 22px 34px;
+  margin-bottom: 30px;
+}
+
+.accordTitle {
+  position: relative;
+  z-index: 1;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: -0.2px;
+}
+
+img.infoIcon {
+  position: absolute;
+  left: -20px;
+  top: 3px;
+}
