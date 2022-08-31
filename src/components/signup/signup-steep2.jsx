@@ -5,6 +5,7 @@ import SignupFooter from '../../header-footer/signup-footer';
 
 import QR from '../../assets/img/qr.png';
 import Info from '../../assets/img/info.svg';
+import Qrinfo from './qr';
 
 
 function SignupSteep2() {
@@ -23,7 +24,8 @@ function SignupSteep2() {
                             </div>
                             <div className="qrcode_scan">
                                 <div className="qrcode">
-                                    <img src={QR} alt="qr" />
+                                <Qrinfo />
+                                    
                                 </div>
                                 <div className="qr-inf">
                                     <img src={Info} alt="Info" />

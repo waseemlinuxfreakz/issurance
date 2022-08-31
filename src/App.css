@@ -392,3 +392,8 @@ img.infoIcon {
   left: -20px;
   top: 3px;
 }
+.qr_inf_desc {
+  position: relative;
+  text-align: right;
+  left: -20%;
+}
