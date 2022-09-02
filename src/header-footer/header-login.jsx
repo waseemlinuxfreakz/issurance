@@ -2,19 +2,19 @@ import React from 'react';
 
 import logo from '../assets/img/logo-signup.svg';
 
-function HeaderSignup() {
+function HeaderLogin() {
     return ( 
         <header id='signup-header'>
             <div className="header-contaienr">
                 <div className="navBrand">
-                    <a href="/"><img src={logo} alt="logo-signup.svg" /></a>
+                    <a href="#/"><img src={logo} alt="logo-signup.svg" /></a>
                 </div>
                 <div className="loginBtn">
-                    <a href="login" className='logInBtn'>Login</a>
+                    <a href="/signup-steep1" className='logInBtn'>Sign Up</a>
                 </div>
             </div>
         </header>
      );
 }
 
-export default HeaderSignup;
+export default HeaderLogin;

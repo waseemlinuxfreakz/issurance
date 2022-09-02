@@ -1,13 +1,13 @@
 import React from 'react';
 
 import issuance from '../../assets/img/issuance.svg';
-import HeaderSignup from '../../header-footer/header-signup';
+import HeaderFirst from '../../header-footer/header-first';
 
 
 function SignupFirst() {
     return ( 
         <div className='firstScreen'>
-            <HeaderSignup/>
+            <HeaderFirst/>
             <div className="sgnup-login_area signWrap">
                 <div className="sgnup-login-container">
                     <div className="sgnup-login-text">
@@ -16,7 +16,7 @@ function SignupFirst() {
                     </div>
                     <div className="sgnup-login-btn">
                         <a href="/signup-steep1" className="whiteBtn">Sign up </a>
-                        <a href="#" className="blackBtn">Log in </a>
+                        <a href="/login" className="blackBtn">Log in </a>
                     </div>
                 </div>
                 <div className="sgnup-login-footer text-center">

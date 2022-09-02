@@ -1,32 +1,28 @@
 import React from 'react';
 
-import HeaderSignup from '../../header-footer/header-signup';
 import SignupFooter from '../../header-footer/signup-footer';
+import HeaderLogin from '../../header-footer/header-login';
+
 
 import QR from '../../assets/img/qr.png';
 import Info from '../../assets/img/info.svg';
 
-import QRCode from './qr';
-
-function SignupSteep2() {
+function LogIn() {
     return (
         <div className='steep-1 formSteepWrap'>
-            <HeaderSignup />
+            <HeaderLogin />
             <div className="sgnup-login_area signWrap">
                 <div className="container">
-                    <div className="signUpSteep signUpSteep2">
+                    <div className="signUpSteep LogIn">
                         <div className="formSteepBox">
                             <div className="w50">
-                                <span className="form_steepLabel">Step 2 of 4</span>
-                                <h1>Scan QR code</h1>
+                                <h1>Login by scanning QR code</h1>
                                 <br />
-                                <p>On your mobile phone, open the camera or a QR code scanner and point to the code.</p>
+                                <p>On your mobile phone, open the camera or a QR code scanner and point to the code..</p>
                             </div>
                             <div className="qrcode_scan">
                                 <div className="qrcode">
-                                    {/* <img src={QR} alt="qr" /> */}
-                                    {/* <Qrinfo /> */}
-                                    <QRCode value="hey" />
+                                    <img src={QR} alt="qr" />
                                 </div>
                                 <div className="qr-inf">
                                     <img src={Info} alt="Info" />
@@ -43,4 +39,4 @@ function SignupSteep2() {
     );
 }
 
-export default SignupSteep2;
+export default LogIn;

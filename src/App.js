@@ -7,14 +7,22 @@ import SignupSteep1 from './components/signup/signup-steep1';
 import SignupSteep2 from './components/signup/signup-steep2';
 import SignupSteep3 from './components/signup/signup-steep3';
 import SignupSteep4 from './components/signup/signup-steep4';
-import Dashboard from './components/dashboard/dashboard';
+import LogIn from "./components/login/login";
+
+import Dashboard from "./components/dashboard/dashboard";
+import CredentialSetup from "./components/credential-setup/CredentialSetup";
+import ConfigureCredentials from "./components/credential-setup/configurecredentials";
+import PublishCredential from "./components/credential-setup/publish-model";
+
+
+
+
 
 import "./App.css";
 import "./Default.css";
 import "./Global.css";
 import "./Responsive.css";
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
@@ -27,7 +35,11 @@ function App() {
             <Route path="/signup-steep2" element={<SignupSteep2 />} />
             <Route path="/signup-steep3" element={<SignupSteep3 />} />
             <Route path="/signup-steep4" element={<SignupSteep4 />} />
+            <Route path="/login" element={<LogIn />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/credential" element={<CredentialSetup />} />
+            <Route path="/credential/configure-credentials" element={<ConfigureCredentials />} />
+            <Route path="/credential/publish-credentials" element={<PublishCredential />} />
           </Route>
         </Routes>
       </BrowserRouter>

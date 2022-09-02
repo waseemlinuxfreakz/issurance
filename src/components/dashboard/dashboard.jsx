@@ -1,138 +1,158 @@
-import { useState,React,Component,Link } from 'react';
-import { render } from "react-dom";
-import { ProSidebar, Menu, MenuItem, SubMenu,SidebarHeader,SidebarFooter,SidebarContent } from 'react-pro-sidebar';
-import 'react-pro-sidebar/dist/css/styles.css';
-import { FaList, FaRegHeart } from "react-icons/fa";
-import { FiHome, FiLogOut, FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi";
-import { RiPencilLine } from "react-icons/ri";
-import { BiCog } from "react-icons/bi";
-import {headercss} from "../../header.css";
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import SideMenu from './dashboard-side-menu';
+import DashboardTopNav from './dashboard-topnav';
+
+import ActiveWall from '../../assets/img/activeWall.svg';
+import Credentials from '../../assets/img/credentials.svg';
+import Unsuccessful from '../../assets/img/Unsuccessful.svg';
+import GoogleChartcolum from './google-chart-colum';
+import GoogleChartDate from './google-chart-Date';
+import CredentionOverview from './CredentionOverview';
+import CredentionOverviewNotIssue from './CredentionOverview-notIssue';
+
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-import { Chart } from "react-google-charts";
 
-export const data = [
-    [
-      "Month",
-      "Bolivia",
-      "Ecuador",
-      "Madagascar",
-      "Papua New Guinea",
-      "Rwanda",
-      "Average",
-    ],
-    ["2004/05", 165, 938, 522, 998, 450, 614.6],
-    ["2005/06", 135, 1120, 599, 1268, 288, 682],
-    ["2006/07", 157, 1167, 587, 807, 397, 623],
-    ["2007/08", 139, 1110, 615, 968, 215, 609.4],
-    ["2008/09", 136, 691, 629, 1026, 366, 569.6],
-  ];
-
-  export const data_second = [
-    ["Element", "Density", { role: "style" }],
-    ["Copper", 8.94, "#b87333"], // RGB value
-    ["Silver", 10.49, "silver"], // English color name
-    ["Gold", 19.3, "gold"],
-    ["Platinum", 21.45, "color: #e5e4e2"], // CSS-style declaration
-  ];
-  
-  export const options = {
-    title: "Monthly Coffee Production by Country",
-    vAxis: { title: "Cups" },
-    hAxis: { title: "Month" },
-    seriesType: "bars",
-    series: { 5: { type: "line" } },
-  };
-
-function DashboardUser() {
-
-    
-
-    //create initial menuCollapse state using useState hook
-    const [menuCollapse, setMenuCollapse] = useState(false)
-
-    //create a custom function that will change menucollapse state from false to true and true to false
-  const menuIconClick = () => {
-    //condition checking to change state from true to false and vice versa
-    menuCollapse ? setMenuCollapse(false) : setMenuCollapse(true);
-  };
-
-  const handlemenusClick = (event) => {
-    const activeid = event.target.getAttribute("data-item");
-    console.log(activeid);
-    
-   
-
-  }
-
-
-
+function Dashboard() {
     return (
-        <>
-      <div id="header">
-          {/* collapsed props to change menu size using menucollapse state */}
-        <ProSidebar collapsed={menuCollapse}>
-          <SidebarHeader>
-          <div className="logotext">
-              {/* small and big change using menucollapse state */}
-              <p>{menuCollapse ? "Logo" : "Big Logo"}</p>
+        <div className="dashboard_container dashboardPage">
+            <div className="sideMenu ">
+                <SideMenu />
             </div>
-            <div className="closemenu" onClick={menuIconClick}>
-                {/* changing menu collapse icon on click */}
-              {menuCollapse ? (
-                <FiArrowRightCircle/>
-              ) : (
-                <FiArrowLeftCircle/>
-              )}
+            <div className="dashboard_content">
+                <DashboardTopNav />
+                <div className="dashboad_mainCont">
+
+                    <Tabs
+                        defaultActiveKey="today"
+                        id="daysTabs"
+                        className='DaysTabs'
+                    >
+                        <Tab eventKey="today" title="TODAY">
+                            <div className="dashInf">
+                                <div className="dashinf_col activeWall">
+                                    <div className="dashinf_colTitle">
+                                        <img src={ActiveWall} alt="ActiveWall" /> Active Wallets
+                                    </div>
+                                    <div className="dashinf_cont">
+                                        <h2>1.57m</h2>
+                                        <span>+2740 Today</span>
+                                    </div>
+                                </div>
+                                <div className="dashinf_col credent">
+                                    <div className="dashinf_colTitle">
+                                        <img src={Credentials} alt="Credentials" /> Credentials Issued
+                                    </div>
+                                    <div className="dashinf_cont">
+                                        <h2>156</h2>
+                                        <span>+0 Today</span>
+                                    </div>
+                                </div>
+                                <div className="dashinf_col unsuccess">
+                                    <div className="dashinf_colTitle">
+                                        <img src={Unsuccessful} alt="Unsuccessful" /> Unsuccessful Requests
+                                    </div>
+                                    <div className="dashinf_cont">
+                                        <h2>276</h2>
+                                        <span>+61 Today</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="graph_box">
+                                <GoogleChartcolum />
+                            </div>
+                            <div className="graph_box">
+                                <GoogleChartDate />
+                            </div>
+                        </Tab>
+
+                        <Tab eventKey="days7" title="7 DAYS">
+                        <div className="dashInf">
+                                <div className="dashinf_col activeWall">
+                                    <div className="dashinf_colTitle">
+                                        <img src={ActiveWall} alt="ActiveWall" /> Active Wallets
+                                    </div>
+                                    <div className="dashinf_cont">
+                                        <h2>1.57m</h2>
+                                        <span>+2740 Today</span>
+                                    </div>
+                                </div>
+                                <div className="dashinf_col credent">
+                                    <div className="dashinf_colTitle">
+                                        <img src={Credentials} alt="Credentials" /> Credentials Issued
+                                    </div>
+                                    <div className="dashinf_cont">
+                                        <h2>156</h2>
+                                        <span>+0 Today</span>
+                                    </div>
+                                </div>
+                                <div className="dashinf_col unsuccess">
+                                    <div className="dashinf_colTitle">
+                                        <img src={Unsuccessful} alt="Unsuccessful" /> Unsuccessful Requests
+                                    </div>
+                                    <div className="dashinf_cont">
+                                        <h2>276</h2>
+                                        <span>+61 Today</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="graph_box">
+                                <GoogleChartcolum />
+                            </div>
+                            <div className="graph_box">
+                                <GoogleChartDate />
+                            </div>
+                        </Tab>
+
+                        <Tab eventKey="days30" title="30 DAYS">
+                        <div className="dashInf">
+                                <div className="dashinf_col activeWall">
+                                    <div className="dashinf_colTitle">
+                                        <img src={ActiveWall} alt="ActiveWall" /> Active Wallets
+                                    </div>
+                                    <div className="dashinf_cont">
+                                        <h2>1.57m</h2>
+                                        <span>+2740 Today</span>
+                                    </div>
+                                </div>
+                                <div className="dashinf_col credent">
+                                    <div className="dashinf_colTitle">
+                                        <img src={Credentials} alt="Credentials" /> Credentials Issued
+                                    </div>
+                                    <div className="dashinf_cont">
+                                        <h2>156</h2>
+                                        <span>+0 Today</span>
+                                    </div>
+                                </div>
+                                <div className="dashinf_col unsuccess">
+                                    <div className="dashinf_colTitle">
+                                        <img src={Unsuccessful} alt="Unsuccessful" /> Unsuccessful Requests
+                                    </div>
+                                    <div className="dashinf_cont">
+                                        <h2>276</h2>
+                                        <span>+61 Today</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="graph_box">
+                                <GoogleChartcolum />
+                            </div>
+                            <div className="graph_box">
+                                <GoogleChartDate />
+                            </div>
+                        </Tab>
+
+                    </Tabs>
+                </div>
+                <div className="dashboad_mainRight">
+                    <CredentionOverview/>
+                    <CredentionOverviewNotIssue/>
+                </div>
             </div>
-          </SidebarHeader>
-          <SidebarContent>
-            <Menu iconShape="square">
-                <a href='javascript:void(0);' data-item="dashboard-home" onClick={handlemenusClick} className="Menus-dashboards">Dashboard</a>
-                <a href='javascript:void(0);' data-item="credential-setup" onClick={handlemenusClick} className="Menus-dashboards">Credential Setup</a>
-                <a href='javascript:void(0);' data-item="issuer-did" onClick={handlemenusClick} className="Menus-dashboards">Issuer DIDS</a>
-                <a href='javascript:void(0);' data-item="ecosystems" onClick={handlemenusClick} className="Menus-dashboards">Dashboard</a>
-            </Menu>
-            
-          </SidebarContent>
-          <SidebarFooter>
-            <Menu iconShape="square">
-              <MenuItem icon={<FiLogOut />}>Logout</MenuItem>
-            </Menu>
-          </SidebarFooter>
-        </ProSidebar>
-        
-      </div>
-      <div className="full-content">
-        <div id="dashboard-main" className='dashboard-show'>
-            <h2>Dashboard</h2>
-            <Tabs
-                defaultActiveKey="profile"
-                id="uncontrolled-tab-example"
-                className="mb-3"
-                >
-                <Tab eventKey="home" title="TODAY">
-                <Chart chartType="ColumnChart" width="100%" height="400px" data={data_second} />
-                </Tab>
-                <Tab eventKey="profile" title="LAST 7 DAYS">
-                <Chart
-      chartType="ComboChart"
-      width="100%"
-      height="400px"
-      data={data}
-      options={options}
-    />
-                </Tab>
-                <Tab eventKey="contact" title="LAST 30 DAYS">
-                    Testing third
-                </Tab>
-                </Tabs>
         </div>
-        <div id="credential-setup" className='dashboard-show hide-content'>Main Dashboard second</div>
-        <div id="ecosystems" className='dashboard-show hide-content'>Main Dashboard third</div>
-        
-    </div>
-    </>
-        );
+    );
 }
-export default DashboardUser;
+
+export default Dashboard;
