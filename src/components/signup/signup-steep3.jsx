@@ -14,8 +14,8 @@ function SignupSteep3() {
                     <div className="signUpSteep signUpSteep3">
                         <div className="formSteepBox">
                             <span className="form_steepLabel">Step 3 of 4</span>
-                            <h1>Enter your email</h1>
-                            <form action="#">
+                            <h1>Enter your name</h1>
+                            <form action="/signup-steep4">
                                 <div className="form_inp">
                                     <label htmlFor="firstName">What is your full name?</label>
                                     <div className="row">

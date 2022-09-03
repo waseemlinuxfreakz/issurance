@@ -3,8 +3,8 @@ import React from 'react';
 import HeaderSignup from '../../header-footer/header-signup';
 import SignupFooter from '../../header-footer/signup-footer';
 
-import QR from '../../assets/img/qr.png';
 import Info from '../../assets/img/info.svg';
+import AppBanar from '../../assets/img/app-banar.png';
 
 import QRCode from './qr';
 
@@ -35,6 +35,11 @@ function SignupSteep2() {
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div className="banar_container container">
+                    <div className="app_banar">
+                        <img src={AppBanar} alt="App Banar" />
                     </div>
                 </div>
             </div>

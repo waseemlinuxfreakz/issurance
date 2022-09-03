@@ -15,7 +15,7 @@ function SignupSteep1() {
                         <div className="formSteepBox">
                             <span className="form_steepLabel">Step 1 of 4</span>
                             <h1>Enter your email</h1>
-                            <form action="/signup-steep2">
+                            <form action="/signup-steep3">
                                 <div className="form_inp">
                                     <label htmlFor="signupmail">What is your work email?</label>
                                     <input type="email" placeholder='name@example.com' name='signupmail' id='signupmail' />

@@ -6,12 +6,9 @@ import Tab from 'react-bootstrap/Tab';
 
 import Echo from '../../assets/img/echo.svg';
 import InternalImg from '../../assets/img/internal.svg';
+import tickicon from '../../assets/img/tickicon.svg';
 import EchoSystem from './echosystem';
 import Internal from './internal';
-
-
-
-
 
 function CredentialTabs() {
     return (
@@ -26,6 +23,7 @@ function CredentialTabs() {
                                         <img src={Echo} alt="Echo" /> Ecosystem
                                     </div>
                                     <p>Choose or edit popular model types for your client base.</p>
+                                    <img src={tickicon} alt="tickicon" className='CheckIcon' />
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
@@ -34,11 +32,12 @@ function CredentialTabs() {
                                         <img src={InternalImg} alt="Echo" /> Internal
                                     </div>
                                     <p>Create or edit a custom built model for specific purposes.</p>
+                                    <img src={tickicon} alt="tickicon" className='CheckIcon' />
                                 </Nav.Link>
                             </Nav.Item>
                         </Nav>
                     </div>
-                    <div className=''>
+                    <div className='CredentialTabContainer'>
                         <Tab.Content>
                             <Tab.Pane eventKey="ecosystem">
                                 <EchoSystem/>

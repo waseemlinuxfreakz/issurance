@@ -5,7 +5,7 @@ function CredentionOverviewNotIssue() {
         <div className="credention_box notIssueBox">
             <div className="creden_top">
                 <div className="not_issue">
-                    Issued
+                    Not Issued
                 </div>
             </div>
             <ul>

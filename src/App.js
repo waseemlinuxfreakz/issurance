@@ -13,6 +13,7 @@ import Dashboard from "./components/dashboard/dashboard";
 import CredentialSetup from "./components/credential-setup/CredentialSetup";
 import ConfigureCredentials from "./components/credential-setup/configurecredentials";
 import PublishCredential from "./components/credential-setup/publish-model";
+import CreateInternalModel from "./components/credential-setup/create-internal-model";
 
 
 
@@ -40,6 +41,8 @@ function App() {
             <Route path="/credential" element={<CredentialSetup />} />
             <Route path="/credential/configure-credentials" element={<ConfigureCredentials />} />
             <Route path="/credential/publish-credentials" element={<PublishCredential />} />
+            <Route path="/credential/create-internal-model" element={<CreateInternalModel />} />
+            
           </Route>
         </Routes>
       </BrowserRouter>

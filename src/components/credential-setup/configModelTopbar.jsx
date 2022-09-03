@@ -5,17 +5,19 @@ import Down from '../../assets/img/down.svg';
 import nigeria from '../../assets/img/nigeria.png';
 import southAfrica from '../../assets/img/southAfrica.png';
 import dot from '../../assets/img/dot.svg';
+import Editcredential from './edit-credential';
+
+
 
 function ConfigModelTop() {
     return (
         <div className="configModelTop">
             <div className="selectCustomer">
                 <div className="customerTitle">
-                    <img src={Customer} alt="Customer" className="customerIcon" />
-                    <p>Know Your Customer </p>
+                    <Editcredential/>
                     <div className="customerLabel">
                         Verify your customer’s identity as specified
-                        by the selected country’s financial governing body.
+                        by the selected country’s financial governing body.....
                     </div>
                 </div>
                 <div className="customer_drop_menu">

@@ -6,6 +6,7 @@ import HeaderLogin from '../../header-footer/header-login';
 
 import QR from '../../assets/img/qr.png';
 import Info from '../../assets/img/info.svg';
+import AppBanar from '../../assets/img/app-banar.png';
 
 function LogIn() {
     return (
@@ -31,6 +32,11 @@ function LogIn() {
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div className="banar_container container">
+                    <div className="app_banar">
+                        <img src={AppBanar} alt="App Banar" />
                     </div>
                 </div>
             </div>

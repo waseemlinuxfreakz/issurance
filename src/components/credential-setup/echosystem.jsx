@@ -14,7 +14,6 @@ function EchoSystem() {
                     <tr>
                         <th>#</th>
                         <th>Model Name</th>
-                        <th>Description</th>
                         <th>Credentials</th>
                     </tr>
                 </thead>
@@ -22,13 +21,13 @@ function EchoSystem() {
                     <tr>
                         <td>1</td>
                         <td>
-                            <div className="model_name">
+                            <a href='/credential/configure-credentials' className="model_name">
                                 <img src={Customer} alt="Customer" />
                                 <p>Know Your Customer</p>
-                            </div>
-                        </td>
-                        <td>
-                           <p className="table_desc">Verify your customer’s identity as specified by the selected country’s financial governing body.</p>
+                                <div className="customerLabel">
+                                    Verify your customer’s identity as specified by the selected country’s financial governing body.
+                                </div>
+                            </a>
                         </td>
                         <td>
                             <div className="credentials_number">
@@ -36,9 +35,9 @@ function EchoSystem() {
                                 <div className="credentials_drop">
                                     <div className="creaDropTitle">Credentials</div>
                                     <ul className="credentials_drop_list">
-                                        <li><a href="/credential/configure-credentials"><img src={Name} alt="Name" /> Name</a></li>
-                                        <li><a href="/credential/configure-credentials"><img src={Date} alt="Date" /> Date of Birth</a></li>
-                                        <li><a href="/credential/configure-credentials"><img src={Identi} alt="Identi" /> Identification Number</a></li>
+                                        <li>Sanctions Screening</li>
+                                        <li>Adverse Media</li>
+                                        <li>Politically Exposed Persons (PEP)</li>
                                     </ul>
                                 </div>
                             </div>
@@ -47,13 +46,13 @@ function EchoSystem() {
                     <tr>
                         <td>1</td>
                         <td>
-                            <div className="model_name">
+                            <a href='/credential/configure-credentials' className="model_name">
                                 <img src={Anti} alt="Customer" />
                                 <p>Anti-Money Laundering Module</p>
-                            </div>
-                        </td>
-                        <td>
-                           <p className="table_desc">Set measures to mitigate the effects of criminal economic activity.</p>
+                                <div className="customerLabel">
+                                    Verify your customer’s identity as specified by the selected country’s financial governing body.
+                                </div>
+                            </a>
                         </td>
                         <td>
                             <div className="credentials_number">
@@ -61,9 +60,9 @@ function EchoSystem() {
                                 <div className="credentials_drop">
                                     <div className="creaDropTitle">Credentials</div>
                                     <ul className="credentials_drop_list">
-                                        <li><a href="/credential/configure-credentials"><img src={Name} alt="Name" /> Name</a></li>
-                                        <li><a href="/credential/configure-credentials"><img src={Date} alt="Date" /> Date of Birth</a></li>
-                                        <li><a href="/credential/configure-credentials"><img src={Identi} alt="Identi" /> Identification Number</a></li>
+                                        <li>Sanctions Screening</li>
+                                        <li>Adverse Media</li>
+                                        <li>Politically Exposed Persons (PEP)</li>
                                     </ul>
                                 </div>
                             </div>
